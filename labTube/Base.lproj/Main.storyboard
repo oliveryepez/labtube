@@ -110,25 +110,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSb-Pt-4Wg">
-                                <rect key="frame" x="78" y="249" width="445" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSb-Pt-4Wg">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Video URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXe-yS-b6h">
-                                <rect key="frame" x="78" y="313" width="445" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Video URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXe-yS-b6h">
+                                <rect key="frame" x="20" y="338" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-2l-g0q">
-                                <rect key="frame" x="78" y="186" width="445" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7K-oN-WQm">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7K-oN-WQm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <animations/>
                                 <items>
@@ -147,18 +141,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-2l-g0q">
+                                <rect key="frame" x="20" y="234" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="3Vb-2l-g0q" secondAttribute="trailing" constant="57" id="BnM-Lz-75x"/>
-                            <constraint firstItem="3Vb-2l-g0q" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leadingMargin" constant="58" id="FWf-Zc-cC7"/>
-                            <constraint firstItem="zSb-Pt-4Wg" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leadingMargin" constant="58" id="T6c-f5-WLo"/>
+                            <constraint firstItem="m7K-oN-WQm" firstAttribute="top" secondItem="C1z-zi-abn" secondAttribute="topMargin" id="34U-D2-CS8"/>
+                            <constraint firstItem="zSb-Pt-4Wg" firstAttribute="trailing" secondItem="C1z-zi-abn" secondAttribute="trailingMargin" id="Iqe-R0-xhG"/>
+                            <constraint firstItem="3Vb-2l-g0q" firstAttribute="trailing" secondItem="C1z-zi-abn" secondAttribute="trailingMargin" id="MoX-a7-KZp"/>
                             <constraint firstItem="m7K-oN-WQm" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leading" id="WB2-FQ-mMf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zSb-Pt-4Wg" secondAttribute="trailing" constant="57" id="d19-Ox-pEs"/>
+                            <constraint firstItem="zSb-Pt-4Wg" firstAttribute="centerY" secondItem="C1z-zi-abn" secondAttribute="centerY" id="XS7-nQ-F2o"/>
+                            <constraint firstItem="MXe-yS-b6h" firstAttribute="top" secondItem="zSb-Pt-4Wg" secondAttribute="bottom" constant="23" id="ekW-4v-7rP"/>
+                            <constraint firstItem="zSb-Pt-4Wg" firstAttribute="centerX" secondItem="C1z-zi-abn" secondAttribute="centerX" id="fEk-nL-vZ7"/>
+                            <constraint firstItem="zSb-Pt-4Wg" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leadingMargin" id="gMT-ow-rp4"/>
+                            <constraint firstItem="MXe-yS-b6h" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leadingMargin" id="hDo-6T-coB"/>
+                            <constraint firstItem="3Vb-2l-g0q" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leadingMargin" id="iu1-RO-1JN"/>
                             <constraint firstAttribute="trailing" secondItem="m7K-oN-WQm" secondAttribute="trailing" id="mdb-OA-NcK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MXe-yS-b6h" secondAttribute="trailing" constant="57" id="pvp-Xo-9On"/>
-                            <constraint firstItem="MXe-yS-b6h" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leadingMargin" constant="58" id="xUI-ai-xSa"/>
+                            <constraint firstItem="MXe-yS-b6h" firstAttribute="trailing" secondItem="C1z-zi-abn" secondAttribute="trailingMargin" id="q1e-wc-JFN"/>
+                            <constraint firstItem="zSb-Pt-4Wg" firstAttribute="top" secondItem="3Vb-2l-g0q" secondAttribute="bottom" constant="21" id="x4g-l5-aAG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Video" id="SqL-Of-ToE"/>
