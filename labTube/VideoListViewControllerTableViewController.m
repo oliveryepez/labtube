@@ -137,11 +137,13 @@
     }
 }
 
+#pragma mark - My Methods
+
 -(void)addNewVideo:(NSString *)name :(NSString *) desc :(NSString *) url
 {
     NSMutableDictionary *entityValues = [NSMutableDictionary dictionary];
     [entityValues setObject:name forKey:@"name"];
-    [entityValues setObject:desc forKey:@"dec"];
+    [entityValues setObject:desc forKey:@"desc"];
     [entityValues setObject:url forKey:@"url"];
     
     [[DCCoreDataManager sharedInstance] saveEntity:@"Video" withValues:entityValues];
