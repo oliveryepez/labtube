@@ -1,25 +1,183 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WpX-dC-b3H">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Videos-->
+        <scene sceneID="V7d-14-7US">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="y6K-x9-jzP" customClass="VideoListViewControllerTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" id="niW-Ba-uSr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="125" id="cXL-mr-xNW" customClass="VideoCellTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="125"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cXL-mr-xNW" id="6HB-iY-5Bn">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j0b-7E-OlS">
+                                            <rect key="frame" x="21" y="3" width="112" height="103"/>
+                                            <animations/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VideoTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjC-iY-P6B">
+                                            <rect key="frame" x="156" y="8" width="301" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="videoDescription" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvL-Em-h9k">
+                                            <rect key="frame" x="156" y="37" width="330" height="44"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="videoUrl" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-c0-Rc3">
+                                            <rect key="frame" x="378" y="65" width="214" height="44"/>
+                                            <animations/>
+                                            <edgeInsets key="layoutMargins" top="10" left="15" bottom="10" right="15"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="T9M-c0-Rc3" firstAttribute="trailing" secondItem="6HB-iY-5Bn" secondAttribute="trailingMargin" id="NXs-cV-O8i"/>
+                                        <constraint firstItem="T9M-c0-Rc3" firstAttribute="leading" secondItem="j0b-7E-OlS" secondAttribute="trailing" constant="245" id="ofX-wL-fWX"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="lblVideoDescription" destination="cvL-Em-h9k" id="48a-qn-VAG"/>
+                                    <outlet property="lblVideoTitle" destination="ZjC-iY-P6B" id="HOP-0l-LAL"/>
+                                    <outlet property="lblVideoURL" destination="T9M-c0-Rc3" id="qdy-fj-5xR"/>
+                                    <outlet property="thumbVideo" destination="j0b-7E-OlS" id="47p-x6-2LU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="y6K-x9-jzP" id="R8M-w2-utq"/>
+                            <outlet property="delegate" destination="y6K-x9-jzP" id="ub5-7Z-VEP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Videos" id="5pe-4W-mmr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9CK-av-xN5">
+                            <connections>
+                                <segue destination="nl4-P8-tlR" kind="modal" identifier="addVideoSegue" id="Pta-KD-0f2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableVideoList" destination="niW-Ba-uSr" id="TSu-3x-WPx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrx-cG-OXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="949" y="333"/>
+        </scene>
+        <!--Add Video-->
+        <scene sceneID="cIH-NR-MNz">
+            <objects>
+                <viewController id="nl4-P8-tlR" customClass="VideoDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zzb-B0-XyA"/>
+                        <viewControllerLayoutGuide type="bottom" id="fBy-W1-pP3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C1z-zi-abn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSb-Pt-4Wg">
+                                <rect key="frame" x="78" y="249" width="445" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Video URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXe-yS-b6h">
+                                <rect key="frame" x="78" y="313" width="445" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-2l-g0q">
+                                <rect key="frame" x="78" y="186" width="445" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7K-oN-WQm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Add Video" id="R5a-eL-3k3">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lvu-SZ-iSd">
+                                            <connections>
+                                                <action selector="cancelSegue:" destination="nl4-P8-tlR" id="zzP-0t-eAv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="heP-Bd-HXR">
+                                            <connections>
+                                                <action selector="addNewVideo:" destination="nl4-P8-tlR" id="DxR-eu-QF6"/>
+                                                <segue destination="Lnb-cr-aqT" kind="unwind" identifier="addVideoSegue" unwindAction="prepareForUnwindVideoDetail:" id="c1P-Os-swA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Vb-2l-g0q" secondAttribute="trailing" constant="57" id="BnM-Lz-75x"/>
+                            <constraint firstItem="3Vb-2l-g0q" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leadingMargin" constant="58" id="FWf-Zc-cC7"/>
+                            <constraint firstItem="zSb-Pt-4Wg" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leadingMargin" constant="58" id="T6c-f5-WLo"/>
+                            <constraint firstItem="m7K-oN-WQm" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leading" id="WB2-FQ-mMf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zSb-Pt-4Wg" secondAttribute="trailing" constant="57" id="d19-Ox-pEs"/>
+                            <constraint firstAttribute="trailing" secondItem="m7K-oN-WQm" secondAttribute="trailing" id="mdb-OA-NcK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MXe-yS-b6h" secondAttribute="trailing" constant="57" id="pvp-Xo-9On"/>
+                            <constraint firstItem="MXe-yS-b6h" firstAttribute="leading" secondItem="C1z-zi-abn" secondAttribute="leadingMargin" constant="58" id="xUI-ai-xSa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Video" id="SqL-Of-ToE"/>
+                    <connections>
+                        <outlet property="txtVideDescription" destination="zSb-Pt-4Wg" id="r8h-yh-ABX"/>
+                        <outlet property="txtVideoTitle" destination="3Vb-2l-g0q" id="ZQ3-8s-aa9"/>
+                        <outlet property="txtVideoURL" destination="MXe-yS-b6h" id="UhD-lg-YcF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTt-Jj-34I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Lnb-cr-aqT" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="333"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Luj-nP-Z75">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WpX-dC-b3H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i7D-0G-qSX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y6K-x9-jzP" kind="relationship" relationship="rootViewController" id="AJi-l9-hbM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ic-DK-3wY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="333"/>
         </scene>
     </scenes>
 </document>
